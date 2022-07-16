@@ -80,7 +80,7 @@ describe("connectOrCreate", () => {
                 WITH this0
                 CALL {
                 	WITH this0
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this0_genres_connectOrCreate0:Genre { name: $this0_genres_connectOrCreate0_node_name })
                 ON CREATE
                 SET
@@ -128,7 +128,7 @@ describe("connectOrCreate", () => {
                 WITH this0
                 CALL {
                 	WITH this0
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this0_genres_connectOrCreate0:Genre { name: $this0_genres_connectOrCreate0_node_name })
                 ON CREATE
                 SET
@@ -176,7 +176,7 @@ describe("connectOrCreate", () => {
                 WITH this0
                 CALL {
                 	WITH this0
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this0_genres_connectOrCreate0:Genre { name: $this0_genres_connectOrCreate0_node_name })
                 ON CREATE
                 SET
@@ -284,7 +284,7 @@ describe("connectOrCreate", () => {
                 WITH this
                 CALL {
                 	WITH this
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this_genres0_connectOrCreate0:Genre { name: $this_genres0_connectOrCreate0_node_name })
                 ON CREATE
                 SET
@@ -328,7 +328,7 @@ describe("connectOrCreate", () => {
                 WITH this
                 CALL {
                 	WITH this
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this_genres0_connectOrCreate0:Genre { name: $this_genres0_connectOrCreate0_node_name })
                 ON CREATE
                 SET
@@ -372,7 +372,7 @@ describe("connectOrCreate", () => {
                 WITH this
                 CALL {
                 	WITH this
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this_genres0_connectOrCreate0:Genre { name: $this_genres0_connectOrCreate0_node_name })
                 ON CREATE
                 SET
@@ -469,7 +469,7 @@ describe("connectOrCreate", () => {
                 WITH this
                 CALL {
                 	WITH this
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this_connectOrCreate_genres0:Genre { name: $this_connectOrCreate_genres0_node_name })
                 ON CREATE
                 SET
@@ -513,7 +513,7 @@ describe("connectOrCreate", () => {
                 WITH this
                 CALL {
                 	WITH this
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this_connectOrCreate_genres0:Genre { name: $this_connectOrCreate_genres0_node_name })
                 ON CREATE
                 SET
@@ -557,7 +557,7 @@ describe("connectOrCreate", () => {
                 WITH this
                 CALL {
                 	WITH this
-                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@neo4j/graphql/FORBIDDEN\\", [0])
+                	CALL apoc.util.validate(NOT(ANY(r IN [\\"admin\\"] WHERE ANY(rr IN $auth.roles WHERE r = rr))), \\"@mathix420/graphql/FORBIDDEN\\", [0])
                 MERGE (this_connectOrCreate_genres0:Genre { name: $this_connectOrCreate_genres0_node_name })
                 ON CREATE
                 SET

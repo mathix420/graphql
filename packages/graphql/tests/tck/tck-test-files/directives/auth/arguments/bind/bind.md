@@ -45,7 +45,7 @@ CALL {
     SET this0.id = $this0_id
     SET this0.name = $this0_name
     WITH this0
-    CALL apoc.util.validate(NOT(this0.id IS NOT NULL AND this0.id = $this0_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+    CALL apoc.util.validate(NOT(this0.id IS NOT NULL AND this0.id = $this0_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
     RETURN this0
 }
 RETURN this0 { .id } AS this0
@@ -113,17 +113,17 @@ CALL {
     SET this0_posts0_node_creator0_node.id = $this0_posts0_node_creator0_node_id
 
     WITH this0, this0_posts0_node, this0_posts0_node_creator0_node
-    CALL apoc.util.validate(NOT(this0_posts0_node_creator0_node.id IS NOT NULL AND this0_posts0_node_creator0_node.id = $this0_posts0_node_creator0_node_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+    CALL apoc.util.validate(NOT(this0_posts0_node_creator0_node.id IS NOT NULL AND this0_posts0_node_creator0_node.id = $this0_posts0_node_creator0_node_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
 
     MERGE (this0_posts0_node)<-[:HAS_POST]-(this0_posts0_node_creator0_node)
 
     WITH this0, this0_posts0_node
-    CALL apoc.util.validate(NOT(EXISTS((this0_posts0_node)<-[:HAS_POST]-(:User)) AND ALL(creator IN [(this0_posts0_node)<-[:HAS_POST]-(creator:User) | creator] WHERE creator.id IS NOT NULL AND creator.id = $this0_posts0_node_auth_bind0_creator_id)), "@neo4j/graphql/FORBIDDEN", [0])
+    CALL apoc.util.validate(NOT(EXISTS((this0_posts0_node)<-[:HAS_POST]-(:User)) AND ALL(creator IN [(this0_posts0_node)<-[:HAS_POST]-(creator:User) | creator] WHERE creator.id IS NOT NULL AND creator.id = $this0_posts0_node_auth_bind0_creator_id)), "@mathix420/graphql/FORBIDDEN", [0])
 
     MERGE (this0)-[:HAS_POST]->(this0_posts0_node)
 
     WITH this0
-    CALL apoc.util.validate(NOT(this0.id IS NOT NULL AND this0.id = $this0_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+    CALL apoc.util.validate(NOT(this0.id IS NOT NULL AND this0.id = $this0_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
 
     RETURN this0
 }
@@ -178,7 +178,7 @@ WHERE this.id = $this_id
 SET this.id = $this_update_id
 
 WITH this
-CALL apoc.util.validate(NOT(this.id IS NOT NULL AND this.id = $this_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+CALL apoc.util.validate(NOT(this.id IS NOT NULL AND this.id = $this_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
 
 RETURN this { .id } AS this
 ```
@@ -243,7 +243,7 @@ CALL apoc.do.when(this_posts0 IS NOT NULL,
         SET this_posts0_creator0.id = $this_update_posts0_creator0_id
 
         WITH this, this_posts0, this_posts0_creator0
-        CALL apoc.util.validate(NOT(this_posts0_creator0.id IS NOT NULL AND this_posts0_creator0.id = $this_posts0_creator0_auth_bind0_id), \"@neo4j/graphql/FORBIDDEN\", [0])
+        CALL apoc.util.validate(NOT(this_posts0_creator0.id IS NOT NULL AND this_posts0_creator0.id = $this_posts0_creator0_auth_bind0_id), \"@mathix420/graphql/FORBIDDEN\", [0])
 
         RETURN count(*)
     \",
@@ -255,7 +255,7 @@ CALL apoc.do.when(this_posts0 IS NOT NULL,
 {this:this, updateUsers: $updateUsers, this_posts0:this_posts0, auth:$auth,this_update_posts0_creator0_id:$this_update_posts0_creator0_id,this_posts0_creator0_auth_bind0_id:$this_posts0_creator0_auth_bind0_id}) YIELD value as _
 
 WITH this
-CALL apoc.util.validate(NOT(this.id IS NOT NULL AND this.id = $this_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+CALL apoc.util.validate(NOT(this.id IS NOT NULL AND this.id = $this_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
 
 RETURN this { .id } AS this
 ```
@@ -348,7 +348,7 @@ CALL {
     )
 
     WITH this, this_connect_creator0_node
-    CALL apoc.util.validate(NOT(EXISTS((this_connect_creator0_node)<-[:HAS_POST]-(:User)) AND ALL(creator IN [(this_connect_creator0_node)<-[:HAS_POST]-(creator:User) | creator] WHERE creator.id IS NOT NULL AND creator.id = $this_connect_creator0_nodePost0_bind_auth_bind0_creator_id) AND this_connect_creator0_node.id IS NOT NULL AND this_connect_creator0_node.id = $this_connect_creator0_nodeUser1_bind_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+    CALL apoc.util.validate(NOT(EXISTS((this_connect_creator0_node)<-[:HAS_POST]-(:User)) AND ALL(creator IN [(this_connect_creator0_node)<-[:HAS_POST]-(creator:User) | creator] WHERE creator.id IS NOT NULL AND creator.id = $this_connect_creator0_nodePost0_bind_auth_bind0_creator_id) AND this_connect_creator0_node.id IS NOT NULL AND this_connect_creator0_node.id = $this_connect_creator0_nodeUser1_bind_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
 
     RETURN count(*)
 }
@@ -408,7 +408,7 @@ CALL {
     )
 
     WITH this, this_disconnect_creator0
-    CALL apoc.util.validate(NOT(EXISTS((this_disconnect_creator0)<-[:HAS_POST]-(:User)) AND ALL(creator IN [(this_disconnect_creator0)<-[:HAS_POST]-(creator:User) | creator] WHERE creator.id IS NOT NULL AND creator.id = $this_disconnect_creator0Post0_bind_auth_bind0_creator_id) AND this_disconnect_creator0.id IS NOT NULL AND this_disconnect_creator0.id = $this_disconnect_creator0User1_bind_auth_bind0_id), "@neo4j/graphql/FORBIDDEN", [0])
+    CALL apoc.util.validate(NOT(EXISTS((this_disconnect_creator0)<-[:HAS_POST]-(:User)) AND ALL(creator IN [(this_disconnect_creator0)<-[:HAS_POST]-(creator:User) | creator] WHERE creator.id IS NOT NULL AND creator.id = $this_disconnect_creator0Post0_bind_auth_bind0_creator_id) AND this_disconnect_creator0.id IS NOT NULL AND this_disconnect_creator0.id = $this_disconnect_creator0User1_bind_auth_bind0_id), "@mathix420/graphql/FORBIDDEN", [0])
 
     RETURN count(*)
 }

@@ -1,4 +1,4 @@
-# @neo4j/graphql
+# @mathix420/graphql
 
 <p align="center">
   <a href="https://badge.fury.io/js/%40neo4j%2Fgraphql">
@@ -19,7 +19,7 @@ A GraphQL to Cypher query execution layer for Neo4j and JavaScript GraphQL imple
 ## Installation
 
 ```
-$ npm install @neo4j/graphql
+$ npm install @mathix420/graphql
 ```
 
 ⚠ `graphql` & `neo4j-driver` are **peerDependency**(s)
@@ -33,7 +33,7 @@ $ npm install graphql neo4j-driver
 Our TypeScript source is transpiled into Common JS, this means you can use the `require` syntax;
 
 ```js
-const { Neo4jGraphQL } = require("@neo4j/graphql");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
 ```
 
 ## Quick Start
@@ -41,7 +41,7 @@ const { Neo4jGraphQL } = require("@neo4j/graphql");
 Create schema and serve over port 4000 using Apollo Server:
 
 ```js
-const { Neo4jGraphQL } = require("@neo4j/graphql");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
 const neo4j = require("neo4j-driver");
 const { ApolloServer } = require("apollo-server");
 

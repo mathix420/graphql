@@ -17,10 +17,10 @@
  * limitations under the License.
  */
 
-const DEBUG_PREFIX = "@neo4j/graphql";
+const DEBUG_PREFIX = "@mathix420/graphql";
 
-export const AUTH_FORBIDDEN_ERROR = "@neo4j/graphql/FORBIDDEN";
-export const AUTH_UNAUTHENTICATED_ERROR = "@neo4j/graphql/UNAUTHENTICATED";
+export const AUTH_FORBIDDEN_ERROR = "@mathix420/graphql/FORBIDDEN";
+export const AUTH_UNAUTHENTICATED_ERROR = "@mathix420/graphql/UNAUTHENTICATED";
 export const MIN_VERSIONS = [
     { majorMinor: "4.1", neo4j: "4.1.5" },
     { majorMinor: "4.2", neo4j: "4.2.9" },

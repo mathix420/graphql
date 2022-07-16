@@ -2,7 +2,7 @@ const globalConf = require("../../jest.config.base");
 
 module.exports = {
     ...globalConf,
-    displayName: "@neo4j/graphql",
+    displayName: "@mathix420/graphql",
     roots: ["<rootDir>/packages/graphql/src/", "<rootDir>/packages/graphql/tests/"],
     coverageDirectory: "<rootDir>/packages/graphql/coverage/",
     globals: {
