@@ -5,7 +5,7 @@ import * as markdown from "./Markdown";
 const content = `
 # neo-push
 
-Example blog site built with \`@neo4j/graphql\` & React.js. This application showcases features of \`@neo4j/graphql\` such as;
+Example blog site built with \`@mathix420/graphql\` & React.js. This application showcases features of \`@mathix420/graphql\` such as;
 
 1. Nested Mutations
 2. @auth directive

@@ -18,7 +18,7 @@
  */
 
 const { ApolloServer } = require("apollo-server");
-const { Neo4jGraphQL } = require("@neo4j/graphql");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
 
 const defaultTypeDefs = `
 type Movie {

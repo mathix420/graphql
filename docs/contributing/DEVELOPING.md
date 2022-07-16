@@ -116,7 +116,7 @@ The above command can additionally be run from `packages/graphql`, `packages/ogm
 or any directory where there is a `jest.config.js` file!
 
 Additionally, for projects which have the appropriate Yarn scripts setup, you can
-run individual test suites. For instance, to run the TCK test suite of `@neo4j/graphql`,
+run individual test suites. For instance, to run the TCK test suite of `@mathix420/graphql`,
 run the following from `packages/graphql`:
 
 ```bash
@@ -150,14 +150,14 @@ fact that we need to use uncompiled TypeScript code.
 This section will contain a couple of example use cases, one for production
 dependencies and one for test dependencies. They will use an example project
 with name "project" in `packages/project`, and the dependency in question will
-be `@neo4j/graphql`.
+be `@mathix420/graphql`.
 
 #### Production dependencies
 
 First things first, install the dependency as you normally would:
 
 ```bash
-yarn add @neo4j/graphql
+yarn add @mathix420/graphql
 ```
 
 Now, inside `packages/project/src/tsconfig.json`, this will need to look something
@@ -170,7 +170,7 @@ like:
         "baseUrl": "./",
         "outDir": "../dist",
         "paths": {
-            "@neo4j/graphql": ["../../graphql/src"]
+            "@mathix420/graphql": ["../../graphql/src"]
         }
     },
     "references": [{ "path": "../../graphql/src/tsconfig.json" }]
@@ -192,7 +192,7 @@ const globalConf = require("../../jest.config.base");
 
 module.exports = {
     ...globalConf,
-    displayName: "@neo4j/graphql-project",
+    displayName: "@mathix420/graphql-project",
     roots: ["<rootDir>/packages/project/src", "<rootDir>/packages/project/tests"],
     coverageDirectory: "<rootDir>/packages/project/coverage/",
     globals: {
@@ -212,7 +212,7 @@ Let's say you just need an internal dependency for testing purposes. You would
 install this as a dev dependency:
 
 ```bash
-yarn add --dev @neo4j/graphql
+yarn add --dev @mathix420/graphql
 ```
 
 You then need to follow the steps above, but using `packages/project/tests/tsconfig.json`

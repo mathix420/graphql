@@ -234,7 +234,7 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn --immutable
-      - name: Run @neo4j/graphql integration tests and move coverage
+      - name: Run @mathix420/graphql integration tests and move coverage
         run: |
           yarn test:int --coverage
           mv coverage coverage-${{ matrix.neo4j-version }}

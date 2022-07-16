@@ -1,11 +1,11 @@
 [[migration-guide-type-definitions]]
 = Type Definitions
 
-This page will walk through what needs to change in your type definitions before you can pass them into `@neo4j/graphql`.
+This page will walk through what needs to change in your type definitions before you can pass them into `@mathix420/graphql`.
 
 == Directives
 
-Both `neo4j-graphql-js` and `@neo4j/graphql` are highly driven by GraphQL directives. Each heading in this section will address how/if one or many directives available in `neo4j-graphql-js` can be migrated to `@neo4j/graphql`.
+Both `neo4j-graphql-js` and `@mathix420/graphql` are highly driven by GraphQL directives. Each heading in this section will address how/if one or many directives available in `neo4j-graphql-js` can be migrated to `@mathix420/graphql`.
 
 === `@relation`
 
@@ -16,7 +16,7 @@ Migrating this directive is trivial:
 
 For example, `@relation(name: "ACTED_IN", direction: OUT)` becomes `@relationship(type: "ACTED_IN", direction: OUT)`.
 
-See xref::type-definitions/relationships.adoc[Relationships] for more information on relationships in `@neo4j/graphql`.
+See xref::type-definitions/relationships.adoc[Relationships] for more information on relationships in `@mathix420/graphql`.
 
 === Relationship Properties
 
@@ -69,11 +69,11 @@ And note the following changes to the two node types:
 
 === `@cypher`
 
-No change. See xref::type-definitions/cypher.adoc[`@cypher` directive] for more details on this directive in `@neo4j/graphql`.
+No change. See xref::type-definitions/cypher.adoc[`@cypher` directive] for more details on this directive in `@mathix420/graphql`.
 
 === `@neo4j_ignore`
 
-`@neo4j/graphql` offers two directives for skipping autogeneration for specified types/fields:
+`@mathix420/graphql` offers two directives for skipping autogeneration for specified types/fields:
 
 * xref::type-definitions/access-control.adoc#type-definitions-access-control-exclude[`@exclude`]: Skip generation of specified Query/Mutation fields for an object type
 * xref::type-definitions/access-control.adoc#type-definitions-access-control-ignore[`@ignore`]: Ignore a field, which will need custom logic for resolution
@@ -92,7 +92,7 @@ There is an equivalent directive in the new library, but it does not work using 
 
 === `@unique`, `@index` and `@search`
 
-These all relate to database indexes and constraints, which are not currently supported by `@neo4j/graphql`.
+These all relate to database indexes and constraints, which are not currently supported by `@mathix420/graphql`.
 
 == Types
 
@@ -102,7 +102,7 @@ Supported as you would expect, with additional xref::type-definitions/types.adoc
 
 === Temporal Types (`DateTime`, `Date`)
 
-Temporal Types have been massively simplified in `@neo4j/graphql`, down to `DateTime` and `Date`, which use ISO 8601 and "yyyy-mm-dd" strings respectively for parsing and serialization.
+Temporal Types have been massively simplified in `@mathix420/graphql`, down to `DateTime` and `Date`, which use ISO 8601 and "yyyy-mm-dd" strings respectively for parsing and serialization.
 
 In terms of migrating from the old library, the `formatted` field of the old `DateTime` type now becomes the value itself. For example, used in a query:
 
@@ -156,7 +156,7 @@ Supported, queryable using inline fragments as per `neo4j-graphql-js`, but can a
 
 === `_id`
 
-An `_id` field exposing the underlying node ID is not included in each type by default in `@neo4j/graphql` like it was in `neo4j-graphql-js`. If you require this functionality (however, it should be noted that underlying node IDs should not be relied on because they can be reused), you can include a field definition such as in the following type definition:
+An `_id` field exposing the underlying node ID is not included in each type by default in `@mathix420/graphql` like it was in `neo4j-graphql-js`. If you require this functionality (however, it should be noted that underlying node IDs should not be relied on because they can be reused), you can include a field definition such as in the following type definition:
 
 [source, graphql, indent=0]
 ----

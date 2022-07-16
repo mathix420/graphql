@@ -24,10 +24,10 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn
-      - name: Bump @neo4j/graphql version
+      - name: Bump @mathix420/graphql version
         run: yarn version "${{ steps.get-version.outputs.version }}"
         working-directory: packages/graphql
-      - name: Bump @neo4j/graphql-ogm version
+      - name: Bump @mathix420/graphql-ogm version
         run: yarn version "${{ steps.get-version.outputs.version }}"
         working-directory: packages/ogm
       - name: Commit and push new version numbers

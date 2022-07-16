@@ -29,7 +29,7 @@ If applicable, add screenshots to help explain your problem.
 **System (please complete the following information):**
 
 -   OS: [e.g. macOS, Windows]
--   Version: [e.g. @neo4j/graphql@1.0.0]
+-   Version: [e.g. @mathix420/graphql@1.0.0]
 -   Node.js version: [e.g. 14.16.0]
 
 **Additional context**

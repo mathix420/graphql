@@ -15,7 +15,7 @@
 
 ## Contributing
 
-Want to contribute to `@neo4j/graphql`? See our [contributing guide](./docs/markdown/CONTRIBUTING.md) and [development guide](./docs/markdown/DEVELOPING.md) to get started!
+Want to contribute to `@mathix420/graphql`? See our [contributing guide](./docs/markdown/CONTRIBUTING.md) and [development guide](./docs/markdown/DEVELOPING.md) to get started!
 
 ## Links
 
@@ -27,8 +27,8 @@ Want to contribute to `@neo4j/graphql`? See our [contributing guide](./docs/mark
 
 This is a TypeScript Monorepo managed with [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/). To learn more on how to; setup, test and contribute to Neo4j GraphQL then please visit the [Contributing Guide](./CONTRIBUTING.md).
 
-1. [`@neo4j/graphql`](./packages/graphql) - Familiar GraphQL generation, for usage with an API such as [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
-2. [`@neo4j/graphql-ogm`](./packages/ogm) - Use GraphQL Type Definitions to drive interactions with the database
+1. [`@mathix420/graphql`](./packages/graphql) - Familiar GraphQL generation, for usage with an API such as [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+2. [`@mathix420/graphql-ogm`](./packages/ogm) - Use GraphQL Type Definitions to drive interactions with the database
 
 ## Media
 

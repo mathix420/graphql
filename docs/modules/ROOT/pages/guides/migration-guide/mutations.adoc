@@ -1,9 +1,9 @@
 [[migration-guide-mutations]]
 = Mutations
 
-This section will walk through each operation available through GraphQL Mutations, and how to migrate each from `neo4j-graphql-js` to `@neo4j/graphql`.
+This section will walk through each operation available through GraphQL Mutations, and how to migrate each from `neo4j-graphql-js` to `@mathix420/graphql`.
 
-The examples in this section will be based off the following type definitions (which have been migrated over to `@neo4j/graphql` syntax):
+The examples in this section will be based off the following type definitions (which have been migrated over to `@mathix420/graphql` syntax):
 
 [source, graphql, indent=0]
 ----
@@ -26,11 +26,11 @@ A summary of migration points is as follows:
 * The object(s) being mutated are returned as a nested field, to allow for metadata about the operation to be added in future
 * Mutation arguments are now commonly named between different types, but with different input types - such as `where` and `input`
 
-> Note that xref::mutations/index.adoc[Mutations] in `@neo4j/graphql` are incredibly powerful, and it is well worthwhile reading about them in full. You might find that you can collapse multiple current mutations down into one!
+> Note that xref::mutations/index.adoc[Mutations] in `@mathix420/graphql` are incredibly powerful, and it is well worthwhile reading about them in full. You might find that you can collapse multiple current mutations down into one!
 
 == Creating
 
-For creating nodes, the input arguments of `neo4j-graphql` have been moved inside an `input` argument in `@neo4j/graphql`.
+For creating nodes, the input arguments of `neo4j-graphql` have been moved inside an `input` argument in `@mathix420/graphql`.
 
 For example, creating a movie using the old library:
 
@@ -43,7 +43,7 @@ mutation {
 }
 ----
 
-Looks like the following using `@neo4j/graphql`:
+Looks like the following using `@mathix420/graphql`:
 
 [source, graphql, indent=0]
 ----
@@ -62,7 +62,7 @@ Note that `movies` must also be first selected in the selection set.
 
 An update Mutation using `neo4j-graphql-js` had all of the arguments at the root of the Mutation, including the filter and fields to change.
 
-This has all changed in `@neo4j/graphql`, with a `where` argument to select the node, and then an `update` argument (amongst many others) to select what to update.
+This has all changed in `@mathix420/graphql`, with a `where` argument to select the node, and then an `update` argument (amongst many others) to select what to update.
 
 For example, updating the average rating of the Movie Forrest Gump:
 
@@ -107,7 +107,7 @@ mutation {
 }
 ----
 
-Looks like the following using `@neo4j/graphql`:
+Looks like the following using `@mathix420/graphql`:
 
 [source, graphql, indent=0]
 ----
@@ -123,7 +123,7 @@ mutation {
 
 Using `neo4j-graphql-js`, connecting two of the nodes in this example would have been achieved by executing either the `AddMovieActors` or `AddActorMovies` Mutation.
 
-In `@neo4j/graphql`, this is achieved by specifying the `connect` argument on either the `updateMovies` or `updateActors` Mutation.
+In `@mathix420/graphql`, this is achieved by specifying the `connect` argument on either the `updateMovies` or `updateActors` Mutation.
 
 For example:
 
@@ -141,7 +141,7 @@ mutation {
 }
 ----
 
-Would become the following using `@neo4j/graphql`:
+Would become the following using `@mathix420/graphql`:
 
 [source, graphql, indent=0]
 ----
@@ -160,13 +160,13 @@ mutation {
 }
 ----
 
-Note, there are many ways to achieve the same goal using the powerful Mutation ability of `@neo4j/graphql`, so do what feels best for your data!
+Note, there are many ways to achieve the same goal using the powerful Mutation ability of `@mathix420/graphql`, so do what feels best for your data!
 
 == Disconnecting
 
 Similarly to connecting, using `neo4j-graphql-js`, disconnecting two of the nodes in this example would have been achieved by executing either the `RemoveMovieActors` or `RemoveActorMovies` Mutation.
 
-In `@neo4j/graphql`, this is achieved by specifying the `disconnect` argument on either the `updateMovies` or `updateActors` Mutation.
+In `@mathix420/graphql`, this is achieved by specifying the `disconnect` argument on either the `updateMovies` or `updateActors` Mutation.
 
 For example:
 
@@ -184,7 +184,7 @@ mutation {
 }
 ----
 
-Would become the following using `@neo4j/graphql`:
+Would become the following using `@mathix420/graphql`:
 
 [source, graphql, indent=0]
 ----

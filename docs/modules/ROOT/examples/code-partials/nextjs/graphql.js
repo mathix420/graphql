@@ -1,5 +1,5 @@
 import { gql, ApolloServer } from "apollo-server-micro";
-import { Neo4jGraphQL } from "@neo4j/graphql";
+import { Neo4jGraphQL } from "@mathix420/graphql";
 import neo4j from "neo4j-driver";
 
 const typeDefs = gql`

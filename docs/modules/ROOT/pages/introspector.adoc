@@ -1,7 +1,7 @@
 [[introspector]]
 = Introspect schema from an existing Neo4j database
 
-Neo4j provides a tool that enables you, with very little effort, to generate GraphQL type definitions from an existing database. This is provided by a separate npm package, `@neo4j/introspector`.
+Neo4j provides a tool that enables you, with very little effort, to generate GraphQL type definitions from an existing database. This is provided by a separate npm package, `@mathix420/introspector`.
 
 This is usually a one-time-thing and should be considered a starting point for a GraphQL schema.
 
@@ -35,7 +35,7 @@ You can then serve this file with your GraphQL server.
 
 [source, javascript, indent=0]
 ----
-const { toGraphQLTypeDefs } = require("@neo4j/introspector")
+const { toGraphQLTypeDefs } = require("@mathix420/introspector")
 const neo4j = require("neo4j-driver");
 const fs = require('fs');
 
@@ -64,8 +64,8 @@ Here the type definitions are never persisted to disk.
 
 [source, javascript, indent=0]
 ----
-const { Neo4jGraphQL } = require("@neo4j/graphql");
-const { toGraphQLTypeDefs } = require("@neo4j/introspector")
+const { Neo4jGraphQL } = require("@mathix420/graphql");
+const { toGraphQLTypeDefs } = require("@mathix420/introspector")
 const neo4j = require("neo4j-driver");
 
 const driver = neo4j.driver(

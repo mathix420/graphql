@@ -2,7 +2,7 @@ const globalConf = require("../../jest.config.base");
 
 module.exports = {
     ...globalConf,
-    displayName: "@neo4j/graphql-ogm",
+    displayName: "@mathix420/graphql-ogm",
     roots: ["<rootDir>/packages/ogm/src", "<rootDir>/packages/ogm/tests"],
     coverageDirectory: "<rootDir>/packages/ogm/coverage/",
     globals: {

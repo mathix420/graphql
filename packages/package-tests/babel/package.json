@@ -1,5 +1,5 @@
 {
-    "name": "@neo4j/dependency-test-babel",
+    "name": "@mathix420/dependency-test-babel",
     "private": true,
     "version": "1.0.0",
     "description": "",
@@ -8,7 +8,7 @@
     },
     "author": "Neo4j Inc.",
     "dependencies": {
-        "@neo4j/graphql": "file:./package",
+        "@mathix420/graphql": "file:./package",
         "graphql": "^15.4.0",
         "neo4j-driver": "^4.2.0"
     },

@@ -77,7 +77,7 @@ For help installing the APOC plugin, see https://neo4j.com/labs/apoc/4.4/install
 
 1. https://github.com/neo4j/graphql[GitHub]
 2. https://github.com/neo4j/graphql/issues[Issue Tracker]
-3. https://www.npmjs.com/package/@neo4j/graphql[npm package]
+3. https://www.npmjs.com/package/@mathix420/graphql[npm package]
 
 == Licence
 

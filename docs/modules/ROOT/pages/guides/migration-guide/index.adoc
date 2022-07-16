@@ -1,7 +1,7 @@
 [[migration-guide]]
 = Migration Guide
 
-`@neo4j/graphql` was never intended to be a drop-in replacement for `neo4j-graphql-js`. However, simple applications should have a fairly trivial migration process.
+`@mathix420/graphql` was never intended to be a drop-in replacement for `neo4j-graphql-js`. However, simple applications should have a fairly trivial migration process.
 
 == How to Upgrade
 
@@ -10,7 +10,7 @@ You need to uninstall the old library and install the new one (and its peer depe
 [source, bash, indent=0]
 ----
 npm uninstall neo4j-graphql-js
-npm install @neo4j/graphql graphql neo4j-driver
+npm install @mathix420/graphql graphql neo4j-driver
 ----
 
 From this point on, see each section within this guide:

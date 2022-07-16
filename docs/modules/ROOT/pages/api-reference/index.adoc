@@ -2,5 +2,5 @@
 = API Reference
 
 - xref::api-reference/neo4jgraphql.adoc[`Neo4jGraphQL`]
-- xref::api-reference/ogm.adoc[`@neo4j/graphql-ogm`]
+- xref::api-reference/ogm.adoc[`@mathix420/graphql-ogm`]
 

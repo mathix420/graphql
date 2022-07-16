@@ -52,7 +52,7 @@ The `@node` directive is used to specify the configuration of a GraphQL object t
 
 [source, graphql, indent=0]
 ----
-"""Informs @neo4j/graphql of node metadata"""
+"""Informs @mathix420/graphql of node metadata"""
 directive @node(
     """Map the GraphQL type to a custom Neo4j node label"""
     label: String

@@ -114,11 +114,11 @@ Accepts all of the options from https://github.com/ardatan/graphql-tools/blob/%4
 [[api-reference-neo4jgraphql-input-neo4jgraphqlconfig-cypherqueryoptions]]
 ===== `CypherQueryOptions`
 
-All options are enum types imported from `@neo4j/graphql`, for example:
+All options are enum types imported from `@mathix420/graphql`, for example:
 
 [source, javascript, indent=0]
 ----
-const { CypherRuntime } = require("@neo4j/graphql");
+const { CypherRuntime } = require("@mathix420/graphql");
 ----
 
 |===

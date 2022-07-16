@@ -19,7 +19,7 @@ Has become:
 
 [source, javascript, indent=0]
 ----
-const { Neo4jGraphQL } = require("@neo4j/graphql");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
 
 const typeDefs = require("./type-definitions");
 
@@ -46,7 +46,7 @@ const schema = require("./schema");
 const server = new ApolloServer({ schema, context: { driver } });
 
 server.listen().then(({ url }) => {
-    console.log(`@neo4j/graphql API ready at ${url}`);
+    console.log(`@mathix420/graphql API ready at ${url}`);
 });
 ----
 
@@ -64,11 +64,11 @@ const schema = require("./schema");
 const server = new ApolloServer({ schema, context: { driver, neo4jDatabase: "sanmateo" } });
 
 server.listen().then(({ url }) => {
-    console.log(`@neo4j/graphql API ready at ${url}`);
+    console.log(`@mathix420/graphql API ready at ${url}`);
 });
 ----
 
-In `@neo4j/graphql`, this has now become:
+In `@mathix420/graphql`, this has now become:
 
 [source, javascript, indent=0]
 ----
@@ -80,7 +80,7 @@ const schema = require("./schema");
 const server = new ApolloServer({ schema, context: { driver, driverConfig: { database: "sanmateo" } } });
 
 server.listen().then(({ url }) => {
-    console.log(`@neo4j/graphql API ready at ${url}`);
+    console.log(`@mathix420/graphql API ready at ${url}`);
 });
 ----
 

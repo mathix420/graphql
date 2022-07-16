@@ -8,7 +8,7 @@ The `@private` directive allows you to specify fields that should only be access
 === Definition
 [source, graphql, indent=0]
 ----
-"""Instructs @neo4j/graphql to only expose a field through the Neo4j GraphQL OGM."""
+"""Instructs @mathix420/graphql to only expose a field through the Neo4j GraphQL OGM."""
 directive @private on FIELD_DEFINITION
 ----
 
@@ -27,8 +27,8 @@ Using the password field is a great example here. In your application, you would
 
 [source, javascript, indent=0]
 ----
-const { Neo4jGraphQL } = require("@neo4j/graphql");
-const { OGM } = require("@neo4j/graphql-ogm");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
+const { OGM } = require("@mathix420/graphql-ogm");
 const neo4j = require("neo4j-driver");
 
 const driver = neo4j.driver(

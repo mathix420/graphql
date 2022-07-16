@@ -7,7 +7,7 @@ The `@cypher` directive binds a GraphQL field to the result(s) of a Cypher query
 
 [source, graphql, indent=0]
 ----
-"""Instructs @neo4j/graphql to run the specified Cypher statement in order to resolve the value of the field to which the directive is applied."""
+"""Instructs @mathix420/graphql to run the specified Cypher statement in order to resolve the value of the field to which the directive is applied."""
 directive @cypher(
     """The Cypher statement to run which returns a value of the same type composition as the field definition on which the directive is applied."""
     statement: String!,

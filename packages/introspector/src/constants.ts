@@ -17,5 +17,5 @@
  * limitations under the License.
  */
 
-const DEBUG_PREFIX = "@neo4j/";
+const DEBUG_PREFIX = "@mathix420/";
 export const DEBUG_INFER_SCHEMA = `${DEBUG_PREFIX}introspector`;

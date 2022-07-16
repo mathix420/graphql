@@ -40,7 +40,7 @@ touch index.js
 
 The Neo4j GraphQL Library and it's dependencies must be installed:
 
-- `@neo4j/graphql` is the official Neo4j GraphQL Library package, which takes your GraphQL type definitions and generates a schema backed by a Neo4j database for you.
+- `@mathix420/graphql` is the official Neo4j GraphQL Library package, which takes your GraphQL type definitions and generates a schema backed by a Neo4j database for you.
 - `graphql` is the package used by the Neo4j GraphQL Library to generate a schema and execute queries and mutations.
 - `neo4j-driver` is the official Neo4j Driver package for JavaScript, of which an instance must be passed into the Neo4j GraphQL Library.
 
@@ -50,7 +50,7 @@ Additionally, you will need to install a GraphQL server package which will host 
 
 [source, bash, indent=0]
 ----
-npm install @neo4j/graphql graphql neo4j-driver apollo-server
+npm install @mathix420/graphql graphql neo4j-driver apollo-server
 ----
 
 Make sure the database fulfills the requirements stated xref::introduction.adoc#introduction-requirements[here], including the necessary plugins.
@@ -63,7 +63,7 @@ Open up the previously created `index.js` in your editor of choice and write out
 
 [source, javascript, indent=0]
 ----
-const { Neo4jGraphQL } = require("@neo4j/graphql");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
 const { ApolloServer, gql } = require("apollo-server");
 const neo4j = require("neo4j-driver");
 

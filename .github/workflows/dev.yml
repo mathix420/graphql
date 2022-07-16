@@ -159,7 +159,7 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
       - run: yarn build
-      - name: Run @neo4j/graphql package tests
+      - name: Run @mathix420/graphql package tests
         run: yarn --cwd packages/graphql run test:package-tests
 
   integration-tests-on-prem:
@@ -202,7 +202,7 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn --immutable
-      - name: Run @neo4j/graphql integration tests and move coverage
+      - name: Run @mathix420/graphql integration tests and move coverage
         run: |
           yarn test:int --coverage
           mv coverage coverage-${{ matrix.neo4j-version }}
@@ -284,7 +284,7 @@ jobs:
           lowercase_instance=${{ matrix.aura-instance }}
           echo "AURA_URI_SECRET=AURA_${lowercase_instance^^}_URI" >>"${GITHUB_ENV}"
           echo "AURA_PASSWORD_SECRET=AURA_${lowercase_instance^^}_PASSWORD" >>"${GITHUB_ENV}"
-      - name: Run @neo4j/graphql integration tests
+      - name: Run @mathix420/graphql integration tests
         run: |
           yarn test:int --coverage
           mv coverage coverage-aura-${{ matrix.aura-instance }}

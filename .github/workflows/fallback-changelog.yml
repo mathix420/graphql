@@ -48,8 +48,8 @@ jobs:
         run: git merge --no-ff "origin/release/$VERSION" --strategy-option theirs
       - name: git tag
         run: |
-          git tag -a "@neo4j/graphql@$VERSION" -m "@neo4j/graphql@$VERSION"
-          git tag -a "@neo4j/graphql-ogm@$VERSION" -m "@neo4j/graphql-ogm@$VERSION"
+          git tag -a "@mathix420/graphql@$VERSION" -m "@mathix420/graphql@$VERSION"
+          git tag -a "@mathix420/graphql-ogm@$VERSION" -m "@mathix420/graphql-ogm@$VERSION"
       - name: git push
         run: git push --follow-tags
       - uses: actions/checkout@v2
@@ -97,15 +97,15 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v2
         with:
           configuration: "config/release-changelog-builder-action/configuration-${{ steps.get-label.outputs.label }}.json"
-          toTag: "@neo4j/${{ matrix.package }}@${{ env.VERSION }}"
+          toTag: "@mathix420/${{ matrix.package }}@${{ env.VERSION }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           body: ${{ steps.github-release.outputs.changelog }}
-          name: "@neo4j/${{ matrix.package }}@${{ env.VERSION }}"
-          tag_name: "@neo4j/${{ matrix.package }}@${{ env.VERSION }}"
+          name: "@mathix420/${{ matrix.package }}@${{ env.VERSION }}"
+          tag_name: "@mathix420/${{ matrix.package }}@${{ env.VERSION }}"
           prerelease: |
             ${{ startsWith(steps.get-prerelease.outputs.prerelease, 'alpha') }} ||
             ${{ startsWith(steps.get-prerelease.outputs.prerelease, 'beta') }} ||

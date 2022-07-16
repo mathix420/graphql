@@ -8,7 +8,7 @@ Unique node property constraints map to `@unique` directives used in your type d
 
 [source, graphql, indent=0]
 ----
-"""Informs @neo4j/graphql that there should be a uniqueness constraint in the database for the decorated field."""
+"""Informs @mathix420/graphql that there should be a uniqueness constraint in the database for the decorated field."""
 directive @unique(
     """The name which should be used for this constraint. By default; type name, followed by an underscore, followed by the field name."""
     constraintName: String
@@ -73,7 +73,7 @@ input FullTextInput {
 }
 
 """
-Informs @neo4j/graphql that there should be a fulltext index in the database, allows users to search by the index in the generated schema.
+Informs @mathix420/graphql that there should be a fulltext index in the database, allows users to search by the index in the generated schema.
 """
 directive @fulltext(indexes: [FullTextInput]!) on OBJECT
 ----

@@ -11,9 +11,9 @@ A clear and concise description of what the regression is.
 
 **Last working version**
 
-Worked up to version: [e.g. @neo4j/graphql@1.0.0]
+Worked up to version: [e.g. @mathix420/graphql@1.0.0]
 
-Stopped working in version: [e.g. @neo4j/graphql@1.1.0]
+Stopped working in version: [e.g. @mathix420/graphql@1.1.0]
 
 **Type definitions**
 If applicable, add your type definitions to help us reproduce the bug.

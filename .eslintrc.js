@@ -1,6 +1,6 @@
 /*
 
-    ESLint configuration for @neo4j/graphql monorepo
+    ESLint configuration for @mathix420/graphql monorepo
 
     Comments in this file encouraged to justify the reason for or benefits of having rules configured
 

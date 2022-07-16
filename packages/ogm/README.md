@@ -1,4 +1,4 @@
-# @neo4j/graphql-ogm
+# @mathix420/graphql-ogm
 
 <p align="center">
   <a href="https://badge.fury.io/js/%40neo4j%2Fgraphql-ogm">
@@ -19,7 +19,7 @@ GraphQL powered OGM for Neo4j and Javascript applications.
 ## Installation
 
 ```
-$ npm install @neo4j/graphql-ogm
+$ npm install @mathix420/graphql-ogm
 ```
 
 ⚠ `graphql` & `neo4j-driver` are **peerDependency**(s)
@@ -33,13 +33,13 @@ $ npm install graphql neo4j-driver
 Our TypeScript source is transpiled into Common JS, this means you can use the `require` syntax;
 
 ```js
-const { OGM, Model } = require("@neo4j/graphql-ogm");
+const { OGM, Model } = require("@mathix420/graphql-ogm");
 ```
 
 ### Quick Start
 
 ```js
-const { OGM } = require("@neo4j/graphql-ogm");
+const { OGM } = require("@mathix420/graphql-ogm");
 const neo4j = require("neo4j-driver");
 
 const typeDefs = `

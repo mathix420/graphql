@@ -11,7 +11,7 @@ Will write to outFile:
 
 [source, typescript, indent=0]
 ----
-import { OGM, generate } from "@neo4j/graphql-ogm";
+import { OGM, generate } from "@mathix420/graphql-ogm";
 
 const typeDefs = `
     type Movie {
@@ -41,7 +41,7 @@ Will return a string:
 
 [source, typescript, indent=0]
 ----
-import { OGM, generate } from "@neo4j/graphql-ogm";
+import { OGM, generate } from "@mathix420/graphql-ogm";
 
 const typeDefs = `
     type Movie {

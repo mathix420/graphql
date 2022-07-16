@@ -18,7 +18,7 @@
  */
 
 // Import using commonJS
-const { Neo4jGraphQL } = require("@neo4j/graphql");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
 const { printSchema } = require("graphql");
 // Augment schema with simple typeDefs input
 const typeDefs = `type Movie{ id: ID!}`;

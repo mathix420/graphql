@@ -4,7 +4,7 @@
 
 = Usage with Next.js
 
-This page describes the basics on how to use `@neo4j/graphql` as part of a https://nextjs.org[Next.js] application.  
+This page describes the basics on how to use `@mathix420/graphql` as part of a https://nextjs.org[Next.js] application.  
 
 The official documentation on how to setup a GraphQL in Next.js is located https://github.com/vercel/next.js/tree/canary/examples/api-routes-graphql[here].
 
@@ -24,7 +24,7 @@ To have a GraphQL API started when the application starts, dependencies are need
 
 === Add dependencies
 
-At this point it's time to add the dependencies needed to run `@neo4j/graphql` inside Next.js.
+At this point it's time to add the dependencies needed to run `@mathix420/graphql` inside Next.js.
 
 [source, bash, indent=0]
 ----
@@ -51,4 +51,4 @@ include::{sourcedir}/graphql.js[]
 ----
 
 == Start the server
-That is all that needs to be done for `@neo4j/graphql` to work in a Next.js application. The dev server starts wtih `yarn dev` and Apollo Studio should be loaded on http://localhost:3000 and the front-end part of the Next.js application should be able to query the API.
+That is all that needs to be done for `@mathix420/graphql` to work in a Next.js application. The dev server starts wtih `yarn dev` and Apollo Studio should be loaded on http://localhost:3000 and the front-end part of the Next.js application should be able to query the API.

@@ -3,8 +3,8 @@
     "compilerOptions": {
         "types": ["node", "jest"],
         "paths": {
-            "@neo4j/graphql": ["../../../../packages/graphql/src"],
-            "@neo4j/graphql-ogm": ["../../../../packages/ogm/src"]
+            "@mathix420/graphql": ["../../../../packages/graphql/src"],
+            "@mathix420/graphql-ogm": ["../../../../packages/ogm/src"]
         }
     },
     "references": [

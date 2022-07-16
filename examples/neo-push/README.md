@@ -123,9 +123,9 @@ This application has two custom resolvers; sign in and sign up. In the resolvers
 
 the `.sub` property is the users id. We use `NEO4J_GRAPHQL_JWT_SECRET` env var on the sever to configure the secret.
 
-> Note to keep things simple... This application has no JWT expiry or refreshing mechanism. Patterns you would implement outside of `@neo4j/graphql` so we deemed it less important in this showcase.
+> Note to keep things simple... This application has no JWT expiry or refreshing mechanism. Patterns you would implement outside of `@mathix420/graphql` so we deemed it less important in this showcase.
 
-When the client is making a request to server we attach the JWT in the `authorization` header of the request, the same header `@neo4j/graphql` looks at.
+When the client is making a request to server we attach the JWT in the `authorization` header of the request, the same header `@mathix420/graphql` looks at.
 
 ## Users
 
@@ -171,7 +171,7 @@ query myBlogs($id: ID, $offset: Int, $limit: Int, $hasNextBlogsoffset: Int) {
 
 ### Pagination
 
-⚠ Page info such as Relay spec is not supported in the current version of `@neo4j/graphql` so with the **My Blogs** and **Recently Updated Blogs** we query twice asking for the next item, to determine if there is a next page. Using this technique we can paginate the blog lists.
+⚠ Page info such as Relay spec is not supported in the current version of `@mathix420/graphql` so with the **My Blogs** and **Recently Updated Blogs** we query twice asking for the next item, to determine if there is a next page. Using this technique we can paginate the blog lists.
 
 > Image showing pagination with limit of 1, in the app its default to 10.
 

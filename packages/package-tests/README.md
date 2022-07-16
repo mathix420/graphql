@@ -11,7 +11,7 @@ npm run test:package-tests
 ```
 
 This script will create a npm package, move it into `packages/package-tests` (so it doesn't have
-the devDependencies from `@neo4j/graphql` in scope), unpack it and run tests on it in different environments and setups.  
+the devDependencies from `@mathix420/graphql` in scope), unpack it and run tests on it in different environments and setups.  
 It should cleanup after itself.
 
 NOTE: These tests do **not** run when `lerna run test` is executed, because these are not

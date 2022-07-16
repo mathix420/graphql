@@ -1,6 +1,6 @@
 import { ApolloServer } from "apollo-server-express";
-import { Neo4jGraphQL } from "@neo4j/graphql";
-import { OGM } from "@neo4j/graphql-ogm";
+import { Neo4jGraphQL } from "@mathix420/graphql";
+import { OGM } from "@mathix420/graphql-ogm";
 import { driver } from "../neo4j";
 import { Context } from "../types";
 import * as User from "./User";

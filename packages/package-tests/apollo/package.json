@@ -1,5 +1,5 @@
 {
-    "name": "@neo4j/package-tests-apollo",
+    "name": "@mathix420/package-tests-apollo",
     "private": true,
     "version": "1.0.0",
     "description": "",
@@ -11,7 +11,7 @@
     },
     "author": "Neo4j Inc.",
     "dependencies": {
-        "@neo4j/graphql": "file:./package",
+        "@mathix420/graphql": "file:./package",
         "apollo-server": "^2.19.0",
         "graphql": "^15.4.0",
         "neo4j-driver": "^4.2.0",

@@ -2,7 +2,7 @@
 
 This is a tool that enables you, with very little effort, to introspect the schema / data model in an existing Neo4j database and builds up a set of data structures that can be transformed into any output format.
 
-This is provided by a separate npm package, `@neo4j/introspector`.
+This is provided by a separate npm package, `@mathix420/introspector`.
 
 The currently officially supported output format is GraphQL type definitions.
 This is usually a one-time-thing and should be considered a starting point for a GraphQL schema.
@@ -36,7 +36,7 @@ This example introspects the schema, generates GraphQL type definitions and pers
 You can then serve this file with your GraphQL server.
 
 ```js
-const { toGraphQLTypeDefs } = require("@neo4j/introspector");
+const { toGraphQLTypeDefs } = require("@mathix420/introspector");
 const neo4j = require("neo4j-driver");
 const fs = require("fs");
 
@@ -61,8 +61,8 @@ This example generates a **read-only** version of the schema from the database a
 Here the type definitions are never persisted to disk.
 
 ```js
-const { Neo4jGraphQL } = require("@neo4j/graphql");
-const { toGraphQLTypeDefs } = require("@neo4j/introspector");
+const { Neo4jGraphQL } = require("@mathix420/graphql");
+const { toGraphQLTypeDefs } = require("@mathix420/introspector");
 const neo4j = require("neo4j-driver");
 
 const driver = neo4j.driver("neo4j://localhost:7687", neo4j.auth.basic("neo4j", "password"));
@@ -92,7 +92,7 @@ You can introspect the schema and then transform it to any desired format.
 Example:
 
 ```js
-const { toGenericStruct } = require("@neo4j/introspector");
+const { toGenericStruct } = require("@mathix420/introspector");
 const neo4j = require("neo4j-driver");
 
 const driver = neo4j.driver("neo4j://localhost:7687", neo4j.auth.basic("neo4j", "password"));

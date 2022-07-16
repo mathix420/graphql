@@ -18,7 +18,7 @@
  */
 
 import * as neo4j from "neo4j-driver";
-import { Neo4jGraphQL } from "@neo4j/graphql";
+import { Neo4jGraphQL } from "@mathix420/graphql";
 import { toGraphQLTypeDefs } from "../../../src/index";
 import createDriver from "../neo4j";
 

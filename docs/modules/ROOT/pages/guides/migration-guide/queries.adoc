@@ -20,7 +20,7 @@ type Query {
 }
 ----
 
-In `@neo4j/graphql`, the ethos has been to simplify the top-level arguments:
+In `@mathix420/graphql`, the ethos has been to simplify the top-level arguments:
 
 [source, graphql, indent=0]
 ----
@@ -50,7 +50,7 @@ query {
 }
 ----
 
-Is now changed to the following using `@neo4j/graphql`:
+Is now changed to the following using `@mathix420/graphql`:
 
 [source, graphql, indent=0]
 ----
@@ -66,7 +66,7 @@ When discussing how the field `where` of type `MovieWhere` differs to the field 
 .Comparing the fields of the `_MovieFilter` and `MovieWhere` types
 [cols="1,1"]
 |===
-|`neo4j-graphql-js` |`@neo4j/graphql`
+|`neo4j-graphql-js` |`@mathix420/graphql`
 
 |`AND: [_MovieFilter!]`
 |`AND: [MovieWhere!]`
@@ -139,7 +139,7 @@ For filtering on relationship fields, the `_some`, `_none`, `_single` and `_ever
 
 === Sorting
 
-Sorting has changed somewhat in `@neo4j/graphql`. For the example being used in this page, the `_MovieOrdering` type in `neo4j-graphql-js` was an enum which looked like the following:
+Sorting has changed somewhat in `@mathix420/graphql`. For the example being used in this page, the `_MovieOrdering` type in `neo4j-graphql-js` was an enum which looked like the following:
 
 [source, graphql, indent=0]
 ----
@@ -162,7 +162,7 @@ query {
 }
 ----
 
-In `@neo4j/graphql`, the sorting type `MovieSort` has become an input type with each field as an enum, like follows:
+In `@mathix420/graphql`, the sorting type `MovieSort` has become an input type with each field as an enum, like follows:
 
 [source, graphql, indent=0]
 ----
@@ -201,7 +201,7 @@ query {
 }
 ----
 
-Using `@neo4j/graphql`, this will now be:
+Using `@mathix420/graphql`, this will now be:
 
 [source, graphql, indent=0]
 ----

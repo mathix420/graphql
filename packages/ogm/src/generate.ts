@@ -20,7 +20,7 @@
 import { codegen } from "@graphql-codegen/core";
 import * as typescriptPlugin from "@graphql-codegen/typescript";
 import { Types } from "@graphql-codegen/plugin-helpers";
-import { upperFirst, Neo4jGraphQL } from "@neo4j/graphql";
+import { upperFirst, Neo4jGraphQL } from "@mathix420/graphql";
 import camelCase from "camelcase";
 import pluralize from "pluralize";
 import * as fs from "fs";
@@ -39,7 +39,7 @@ export interface IGenerateOptions {
     */
     noWrite?: boolean;
     /**
-        Instance of @neo4j/graphql-ogm
+        Instance of @mathix420/graphql-ogm
     */
     ogm: OGM;
 }

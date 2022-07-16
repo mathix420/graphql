@@ -2,7 +2,7 @@ const globalConf = require("../../jest.config.base");
 
 module.exports = {
     ...globalConf,
-    displayName: "@neo4j/introspector",
+    displayName: "@mathix420/introspector",
     roots: ["<rootDir>/packages/introspector/src/", "<rootDir>/packages/introspector/tests/"],
     coverageDirectory: "<rootDir>/packages/introspector/coverage/",
     globals: {

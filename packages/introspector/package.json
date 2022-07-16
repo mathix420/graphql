@@ -1,5 +1,5 @@
 {
-    "name": "@neo4j/introspector",
+    "name": "@mathix420/introspector",
     "version": "1.0.1",
     "description": "Introspect a Neo4j database model/schema",
     "keywords": [
@@ -33,7 +33,7 @@
     },
     "author": "Neo4j Inc.",
     "devDependencies": {
-        "@neo4j/graphql": "^2.5.9",
+        "@mathix420/graphql": "^2.5.9",
         "@types/jest": "26.0.8",
         "@types/node": "14.0.27",
         "@types/pluralize": "0.0.29",

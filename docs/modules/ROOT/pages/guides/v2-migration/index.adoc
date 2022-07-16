@@ -2,15 +2,15 @@
 [[v2-migration]]
 = 2.0.0 Migration
 
-Version 2.0.0 of `@neo4j/graphql` adds support for relationship properties, with some breaking changes to facilitate these new features. All of the required changes will be on the client side, and this guide will walk through what has changed.
+Version 2.0.0 of `@mathix420/graphql` adds support for relationship properties, with some breaking changes to facilitate these new features. All of the required changes will be on the client side, and this guide will walk through what has changed.
 
 == How to Upgrade
 
-Simply update `@neo4j/graphql` using npm or your package manager of choice:
+Simply update `@mathix420/graphql` using npm or your package manager of choice:
 
 [source, bash, indent=0]
 ----
-npm update @neo4j/graphql
+npm update @mathix420/graphql
 ----
 
 From this point on, it is primarily Mutations which will form the bulk of the migration:

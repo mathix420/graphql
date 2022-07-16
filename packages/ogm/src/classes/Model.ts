@@ -20,7 +20,7 @@
 import { DocumentNode, graphql, parse, print, SelectionSetNode } from "graphql";
 import pluralize from "pluralize";
 import camelCase from "camelcase";
-import { Neo4jGraphQL, upperFirst } from "@neo4j/graphql";
+import { Neo4jGraphQL, upperFirst } from "@mathix420/graphql";
 import { GraphQLOptionsArg, GraphQLWhereArg, DeleteInfo } from "../types";
 
 export interface ModelConstructor {

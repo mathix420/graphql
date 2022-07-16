@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-import { Neo4jGraphQL } from "@neo4j/graphql";
+import { Neo4jGraphQL } from "@mathix420/graphql";
 import { printSchema } from "graphql";
 
 // Augment schema with simple typeDefs input
