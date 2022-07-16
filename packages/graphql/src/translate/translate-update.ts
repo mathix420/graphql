@@ -259,7 +259,11 @@ function translateUpdate({ node, context }: { node: Node; context: Context }): [
                     });
                     createStrs.push(createAndParams[0]);
                     cypherParams = { ...cypherParams, ...createAndParams[1] };
-                    createStrs.push(`MERGE (${varName})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+                    if (relationField.allowMultiple) {
+                        createStrs.push(`CREATE (${varName})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+                    } else {
+                        createStrs.push(`MERGE (${varName})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+                    }
 
                     if (relationField.properties) {
                         const relationship = (context.neoSchema.relationships.find(

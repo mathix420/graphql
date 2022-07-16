@@ -17,12 +17,13 @@
  * limitations under the License.
  */
 
-import { FieldDefinitionNode, StringValueNode } from "graphql";
+import { BooleanValueNode, FieldDefinitionNode, StringValueNode } from "graphql";
 
 type RelationshipMeta = {
     direction: "IN" | "OUT";
     type: string;
     properties?: string;
+    allowMultiple?: boolean;
 };
 
 function getRelationshipMeta(
@@ -60,14 +61,21 @@ function getRelationshipMeta(
         throw new Error("@relationship properties not a string");
     }
 
+    const allowMultipleArg = directive.arguments?.find((x) => x.name.value === "allowMultiple");
+    if (allowMultipleArg && allowMultipleArg.value.kind !== "BooleanValue") {
+        throw new Error("@relationship allowMultiple not a boolean");
+    }
+
     const direction = directionArg.value.value as "IN" | "OUT";
     const type = typeArg.value.value;
     const properties = (propertiesArg?.value as StringValueNode)?.value;
+    const allowMultiple = (allowMultipleArg?.value as BooleanValueNode)?.value;
 
     return {
         direction,
         type,
         properties,
+        allowMultiple,
     };
 }
 

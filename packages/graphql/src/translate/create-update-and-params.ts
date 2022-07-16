@@ -369,11 +369,19 @@ function createUpdateAndParams({
                             });
                             subquery.push(createAndParams[0]);
                             res.params = { ...res.params, ...createAndParams[1] };
-                            subquery.push(
-                                `MERGE (${parentVar})${inStr}[${create.edge ? propertiesName : ""}:${
-                                    relationField.type
-                                }]${outStr}(${nodeName})`
-                            );
+                            if (relationField.allowMultiple) {
+                                subquery.push(
+                                    `CREATE (${parentVar})${inStr}[${create.edge ? propertiesName : ""}:${
+                                        relationField.type
+                                    }]${outStr}(${nodeName})`
+                                );
+                            } else {
+                                subquery.push(
+                                    `MERGE (${parentVar})${inStr}[${create.edge ? propertiesName : ""}:${
+                                        relationField.type
+                                    }]${outStr}(${nodeName})`
+                                );
+                            }
 
                             if (create.edge) {
                                 const setA = createSetRelationshipProperties({

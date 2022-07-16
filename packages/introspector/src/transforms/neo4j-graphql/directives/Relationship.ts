@@ -22,11 +22,13 @@ import { Direction, Directive } from "../types";
 export class RelationshipDirective implements Directive {
     direction: Direction;
     type: string;
+    allowMultiple?: boolean;
     propertiesReference?: string;
-    constructor(type: string, direction: Direction, propertiesReference?: string) {
+    constructor(type: string, direction: Direction, propertiesReference?: string, allowMultiple?: boolean) {
         this.type = type;
         this.direction = direction;
         this.propertiesReference = propertiesReference;
+        this.allowMultiple = allowMultiple;
     }
 
     toString() {
@@ -35,6 +37,9 @@ export class RelationshipDirective implements Directive {
         args.push(`direction: ${this.direction}`);
         if (this.propertiesReference) {
             args.push(`properties: "${this.propertiesReference}"`);
+        }
+        if (this.allowMultiple) {
+            args.push(`allowMultiple: "${this.allowMultiple}"`);
         }
         return `@relationship(${args.join(", ")})`;
     }

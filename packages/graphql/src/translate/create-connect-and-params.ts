@@ -200,7 +200,11 @@ function createConnectAndParams({
         */
         subquery.push(`\tFOREACH(_ IN CASE ${parentVar} WHEN NULL THEN [] ELSE [1] END | `);
         subquery.push(`\t\tFOREACH(_ IN CASE ${nodeName} WHEN NULL THEN [] ELSE [1] END | `);
-        subquery.push(`\t\t\tMERGE (${parentVar})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+        if (relationField.allowMultiple) {
+            subquery.push(`\t\t\tCREATE (${parentVar})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+        } else {
+            subquery.push(`\t\t\tMERGE (${parentVar})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+        }
 
         if (relationField.properties) {
             const relationship = (context.neoSchema.relationships.find(

@@ -32,7 +32,7 @@ import { ScalarType } from "./scalars";
 
 export const aliasDirective = new GraphQLDirective({
     name: "alias",
-    description: "Instructs @neo4j/graphql to map a GraphQL field to a Neo4j node or relationship property.",
+    description: "Instructs @mathix420/graphql to map a GraphQL field to a Neo4j node or relationship property.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         property: {
@@ -45,7 +45,7 @@ export const aliasDirective = new GraphQLDirective({
 export const coalesceDirective = new GraphQLDirective({
     name: "coalesce",
     description:
-        "Instructs @neo4j/graphql to wrap the property in a coalesce() function during queries, using the single value specified.",
+        "Instructs @mathix420/graphql to wrap the property in a coalesce() function during queries, using the single value specified.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         value: {
@@ -59,7 +59,7 @@ export const coalesceDirective = new GraphQLDirective({
 export const cypherDirective = new GraphQLDirective({
     name: "cypher",
     description:
-        "Instructs @neo4j/graphql to run the specified Cypher statement in order to resolve the value of the field to which the directive is applied.",
+        "Instructs @mathix420/graphql to run the specified Cypher statement in order to resolve the value of the field to which the directive is applied.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         statement: {
@@ -73,7 +73,7 @@ export const cypherDirective = new GraphQLDirective({
 export const defaultDirective = new GraphQLDirective({
     name: "default",
     description:
-        "Instructs @neo4j/graphql to set the specified value as the default value in the CreateInput type for the object type in which this directive is used.",
+        "Instructs @mathix420/graphql to set the specified value as the default value in the CreateInput type for the object type in which this directive is used.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         value: {
@@ -87,7 +87,7 @@ export const defaultDirective = new GraphQLDirective({
 export const excludeDirective = new GraphQLDirective({
     name: "exclude",
     description:
-        "Instructs @neo4j/graphql to exclude the specified operations from query and mutation generation. If used without an argument, no queries or mutations will be generated for this type.",
+        "Instructs @mathix420/graphql to exclude the specified operations from query and mutation generation. If used without an argument, no queries or mutations will be generated for this type.",
     locations: [DirectiveLocation.INTERFACE, DirectiveLocation.OBJECT],
     args: {
         operations: {
@@ -117,13 +117,13 @@ export const idDirective = new GraphQLDirective({
 export const ignoreDirective = new GraphQLDirective({
     name: "ignore",
     description:
-        "Instructs @neo4j/graphql to completely ignore a field definition, assuming that it will be fully accounted for by custom resolvers.",
+        "Instructs @mathix420/graphql to completely ignore a field definition, assuming that it will be fully accounted for by custom resolvers.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
 });
 
 export const nodeDirective = new GraphQLDirective({
     name: "node",
-    description: "Informs @neo4j/graphql of node metadata",
+    description: "Informs @mathix420/graphql of node metadata",
     locations: [DirectiveLocation.OBJECT],
     args: {
         label: {
@@ -143,21 +143,21 @@ export const nodeDirective = new GraphQLDirective({
 
 export const privateDirective = new GraphQLDirective({
     name: "private",
-    description: "Instructs @neo4j/graphql to only expose a field through the Neo4j GraphQL OGM.",
+    description: "Instructs @mathix420/graphql to only expose a field through the Neo4j GraphQL OGM.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
 });
 
 export const readonlyDirective = new GraphQLDirective({
     name: "readonly",
     description:
-        "Instructs @neo4j/graphql to only include a field in generated input type for creating, and in the object type within which the directive is applied.",
+        "Instructs @mathix420/graphql to only include a field in generated input type for creating, and in the object type within which the directive is applied.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
 });
 
 export const relationshipDirective = new GraphQLDirective({
     name: "relationship",
     description:
-        "Instructs @neo4j/graphql to treat this field as a relationship. Opens up the ability to create and connect on this field.",
+        "Instructs @mathix420/graphql to treat this field as a relationship. Opens up the ability to create and connect on this field.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         type: {
@@ -169,6 +169,10 @@ export const relationshipDirective = new GraphQLDirective({
         properties: {
             type: GraphQLString,
             description: "The name of the interface containing the properties for this relationship.",
+        },
+        allowMultiple: {
+            type: GraphQLBoolean,
+            description: "Allow creating multiple relationships between two nodes.",
         },
     },
 });
@@ -182,7 +186,7 @@ export const relationshipPropertiesDirective = new GraphQLDirective({
 export const timestampDirective = new GraphQLDirective({
     name: "timestamp",
     description:
-        "Instructs @neo4j/graphql to generate timestamps on particular events, which will be available as the value of the specified field.",
+        "Instructs @mathix420/graphql to generate timestamps on particular events, which will be available as the value of the specified field.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         operations: {
@@ -196,7 +200,7 @@ export const timestampDirective = new GraphQLDirective({
 export const uniqueDirective = new GraphQLDirective({
     name: "unique",
     description:
-        "Informs @neo4j/graphql that there should be a uniqueness constraint in the database for the decorated field.",
+        "Informs @mathix420/graphql that there should be a uniqueness constraint in the database for the decorated field.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
     args: {
         constraintName: {
@@ -210,14 +214,14 @@ export const uniqueDirective = new GraphQLDirective({
 export const writeonlyDirective = new GraphQLDirective({
     name: "writeonly",
     description:
-        "Instructs @neo4j/graphql to only include a field in the generated input types for the object type within which the directive is applied, but exclude it from the object type itself.",
+        "Instructs @mathix420/graphql to only include a field in the generated input types for the object type within which the directive is applied, but exclude it from the object type itself.",
     locations: [DirectiveLocation.FIELD_DEFINITION],
 });
 
 export const fulltextDirective = new GraphQLDirective({
     name: "fulltext",
     description:
-        "Informs @neo4j/graphql that there should be a fulltext index in the database, allows users to search by the index in the generated schema.",
+        "Informs @mathix420/graphql that there should be a fulltext index in the database, allows users to search by the index in the generated schema.",
     args: {
         indexes: {
             type: new GraphQLNonNull(

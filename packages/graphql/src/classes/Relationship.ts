@@ -33,6 +33,7 @@ export interface RelationshipConstructor {
     type: string;
     description?: string;
     properties?: string;
+    // WARN:
     cypherFields?: CypherField[];
     primitiveFields?: PrimitiveField[];
     scalarFields?: CustomScalarField[];

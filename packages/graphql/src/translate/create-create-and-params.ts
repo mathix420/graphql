@@ -109,7 +109,11 @@ function createCreateAndParams({
                         const inStr = relationField.direction === "IN" ? "<-" : "-";
                         const outStr = relationField.direction === "OUT" ? "->" : "-";
                         const relTypeStr = `[${relationField.properties ? propertiesName : ""}:${relationField.type}]`;
-                        res.creates.push(`MERGE (${varName})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+                        if (relationField.allowMultiple) {
+                            res.creates.push(`CREATE (${varName})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+                        } else {
+                            res.creates.push(`MERGE (${varName})${inStr}${relTypeStr}${outStr}(${nodeName})`);
+                        }
 
                         if (relationField.properties) {
                             const relationship = (context.neoSchema.relationships.find(
